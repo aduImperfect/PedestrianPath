@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c7kw2s1jyomna" path="res://Scenes/death.tscn" id="3_kglda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6x6n"]
-size = Vector2(14, 10)
+size = Vector2(55, 40)
 
 [node name="Vehicle" type="Node2D" unique_id=660980076]
 metadata/_edit_vertical_guides_ = [122.0]

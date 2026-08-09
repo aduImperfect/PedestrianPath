@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://7q2kb6d0dbff"]
 
 [ext_resource type="PackedScene" uid="uid://dbswmh8aba0vb" path="res://Scenes/start.tscn" id="1_2qs01"]
-[ext_resource type="PackedScene" uid="uid://c2gstpkex2tx8" path="res://Scenes/goal.tscn" id="2_iel4d"]
 [ext_resource type="PackedScene" uid="uid://b36n3qasn3g46" path="res://Scenes/ground.tscn" id="3_i2y1e"]
 [ext_resource type="Script" uid="uid://brm214bf62dhj" path="res://Scripts/textmousemgr.gd" id="7_ffslo"]
 [ext_resource type="Script" uid="uid://dahduxurndjxb" path="res://Scripts/cards_legend.gd" id="7_hv8fo"]
@@ -10,9 +9,6 @@
 
 [node name="Start" parent="." unique_id=1470424718 instance=ExtResource("1_2qs01")]
 position = Vector2(272, 363)
-
-[node name="Goal" parent="." unique_id=1634378711 instance=ExtResource("2_iel4d")]
-position = Vector2(977, 325)
 
 [node name="Ground_W_R_2" parent="." unique_id=1751980 instance=ExtResource("3_i2y1e")]
 position = Vector2(21, 363)
