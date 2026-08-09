@@ -53,12 +53,12 @@ func _process(_delta: float) -> void:
 			initializationAccumulationTime = 0.0
 			initializationCommplete = true
 		return
-	_spawnEnemy()
+	_spawnVeichle()
 	_spawnPed()
 	initializationCommplete = false
 
-func _spawnEnemy() -> void:
-	PlayersHelper.vehicleCount = 10
+func _spawnVeichle() -> void:
+	PlayersHelper.vehicleCount = 4
 	for count in PlayersHelper.vehicleCount:
 		var instance = PlayersHelper.VEHICLE_SCENE.instantiate()
 		var randVal = randf_range(-10, 10)
@@ -67,7 +67,7 @@ func _spawnEnemy() -> void:
 		PlayersHelper.vehicleNodes.append(instance)		
 
 func _spawnPed() -> void:
-	PlayersHelper.pedestrianCount = 10
+	PlayersHelper.pedestrianCount = 4
 	for count in PlayersHelper.pedestrianCount:
 		var instance = PlayersHelper.PEDESTRIAN_SCENE.instantiate()
 		var randVal = randf_range(-10, 10)
