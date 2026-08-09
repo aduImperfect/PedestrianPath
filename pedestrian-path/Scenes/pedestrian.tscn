@@ -1,24 +1,22 @@
 [gd_scene format=3 uid="uid://ceuwml6bqs2q3"]
 
-[ext_resource type="Script" uid="uid://pcb7fkju4i6x" path="res://Scripts/vehicle.gd" id="1_1h25g"]
-[ext_resource type="Texture2D" uid="uid://ee84eucv85g0" path="res://Textures/Card_03_Jump_Upward.png" id="2_yqvb5"]
-[ext_resource type="PackedScene" uid="uid://c7kw2s1jyomna" path="res://Scenes/death.tscn" id="3_cl0mi"]
+[ext_resource type="Script" uid="uid://c7udoi8vgk7ej" path="res://Scripts/pedestrian.gd" id="1_epmes"]
+[ext_resource type="Texture2D" uid="uid://gv7jgorpo1hl" path="res://Textures/Pedestrian.png" id="2_epmes"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6x6n"]
+size = Vector2(7, 6)
 
-[node name="Vehicle" type="Node2D" unique_id=660980076]
+[node name="Pedestrian" type="Node2D" unique_id=660980076]
 metadata/_edit_vertical_guides_ = [122.0]
 
-[node name="VehicleA2D" type="Area2D" parent="." unique_id=1577239624]
+[node name="PedestrianA2D" type="Area2D" parent="." unique_id=1577239624]
 collision_layer = 2
-script = ExtResource("1_1h25g")
+script = ExtResource("1_epmes")
 
-[node name="VehicleCS2D" type="CollisionShape2D" parent="VehicleA2D" unique_id=2060292915]
+[node name="PedestrianCS2D" type="CollisionShape2D" parent="PedestrianA2D" unique_id=2060292915]
 shape = SubResource("RectangleShape2D_m6x6n")
 debug_color = Color(0.58187073, 0.382447, 1, 0.41960785)
 
-[node name="Vehicle" type="Sprite2D" parent="VehicleA2D" unique_id=2145661472]
+[node name="Pedestrian" type="Sprite2D" parent="PedestrianA2D" unique_id=2145661472]
 scale = Vector2(0.025, 0.025)
-texture = ExtResource("2_yqvb5")
-
-[node name="Death" parent="VehicleA2D" unique_id=1296578022 instance=ExtResource("3_cl0mi")]
+texture = ExtResource("2_epmes")

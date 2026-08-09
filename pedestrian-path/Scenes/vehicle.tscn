@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dr87bgrujk2eh"]
 
 [ext_resource type="Script" uid="uid://pcb7fkju4i6x" path="res://Scripts/vehicle.gd" id="1_hvehr"]
-[ext_resource type="Texture2D" uid="uid://ee84eucv85g0" path="res://Textures/Card_03_Jump_Upward.png" id="2_erwwo"]
+[ext_resource type="Texture2D" uid="uid://ctwk5jv247xn2" path="res://Textures/Vehicle.png" id="2_hvehr"]
 [ext_resource type="PackedScene" uid="uid://c7kw2s1jyomna" path="res://Scenes/death.tscn" id="3_kglda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6x6n"]
+size = Vector2(14, 10)
 
 [node name="Vehicle" type="Node2D" unique_id=660980076]
 metadata/_edit_vertical_guides_ = [122.0]
@@ -19,6 +20,7 @@ debug_color = Color(0.58187073, 0.382447, 1, 0.41960785)
 
 [node name="Vehicle" type="Sprite2D" parent="VehicleA2D" unique_id=2145661472]
 scale = Vector2(0.025, 0.025)
-texture = ExtResource("2_erwwo")
+texture = ExtResource("2_hvehr")
 
 [node name="Death" parent="VehicleA2D" unique_id=1296578022 instance=ExtResource("3_kglda")]
+scale = Vector2(0.7, 0.51)
