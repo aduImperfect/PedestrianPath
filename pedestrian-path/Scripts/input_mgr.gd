@@ -139,6 +139,7 @@ func _process(_delta: float) -> void:
 	if LevelsDatabase.currLevel == LevelsDatabase.levelsCount:
 		return
 
+	position.y = clamp(position.y, -300, 250)
 	InputsData.action_occurring = action_in_progress
 
 func _physics_process(_delta: float) -> void:
@@ -220,7 +221,7 @@ func _add_input_actions_for_this_player() -> void:
 			InputMap.action_add_event(move_down_action, eventAction1)
 			var eventAction2 = InputEventJoypadMotion.new()
 			eventAction2.axis = JoyAxis.JOY_AXIS_LEFT_Y
-			eventAction2.axis_value = -1
+			eventAction2.axis_value = 1
 			eventAction2.device = player_id
 			InputMap.action_add_event(move_down_action, eventAction2)
 			var eventAction3 = InputEventKey.new()
@@ -238,7 +239,7 @@ func _add_input_actions_for_this_player() -> void:
 			InputMap.action_add_event(move_up_action, eventAction1)
 			var eventAction2 = InputEventJoypadMotion.new()
 			eventAction2.axis = JoyAxis.JOY_AXIS_LEFT_Y
-			eventAction2.axis_value = 1
+			eventAction2.axis_value = -1
 			eventAction2.device = player_id
 			InputMap.action_add_event(move_up_action, eventAction2)
 			var eventAction3 = InputEventKey.new()
@@ -258,7 +259,7 @@ func _add_input_actions_for_this_player() -> void:
 			InputMap.action_add_event(move_down_action, eventAction1)
 			var eventAction2 = InputEventJoypadMotion.new()
 			eventAction2.axis = JoyAxis.JOY_AXIS_LEFT_Y
-			eventAction2.axis_value = -1
+			eventAction2.axis_value = 1
 			eventAction2.device = player_id
 			InputMap.action_add_event(move_down_action, eventAction2)
 		if not InputMap.has_action(move_up_action):
@@ -270,6 +271,6 @@ func _add_input_actions_for_this_player() -> void:
 			InputMap.action_add_event(move_up_action, eventAction1)
 			var eventAction2 = InputEventJoypadMotion.new()
 			eventAction2.axis = JoyAxis.JOY_AXIS_LEFT_Y
-			eventAction2.axis_value = 1
+			eventAction2.axis_value = -1
 			eventAction2.device = player_id
 			InputMap.action_add_event(move_up_action, eventAction2)
