@@ -3,15 +3,11 @@
 [ext_resource type="Script" uid="uid://j3tgq4v3uxfo" path="res://Scripts/level_gen.gd" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://bidbtyop8pd1p" path="res://Scripts/audio_mgr.gd" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://bx8dt6gjprmjj" path="res://Scenes/singleplayermode.tscn" id="2_bo1nx"]
-[ext_resource type="Script" uid="uid://d0bc35rqy2oin" path="res://Scripts/card_mgr.gd" id="4_jjvhh"]
 
 [node name="Main" type="Node2D" unique_id=1004778219]
 
 [node name="LevelGen" type="Node2D" parent="." unique_id=1618441754]
 script = ExtResource("1_jjgbg")
-
-[node name="CardMgr" type="Node2D" parent="." unique_id=659665895]
-script = ExtResource("4_jjvhh")
 
 [node name="AudioMgr" type="Node2D" parent="." unique_id=562412432]
 script = ExtResource("2_8gbba")

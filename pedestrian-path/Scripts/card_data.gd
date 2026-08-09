@@ -89,9 +89,10 @@ static func _level_switching_values() -> void:
 
 static func _set_hand_limits_arr() -> void:
 	#Hand limits appended for each level!
-	for k in LevelsDatabase.levelsCount:
-		handLimits.append(LevelsDatabase.levelNodes[k].get_child(4).handValues)
-	handLimit = LevelsDatabase.levelNodes[0].get_child(4).handValues.size()
+	#for k in LevelsDatabase.levelsCount:
+		#handLimits.append(LevelsDatabase.levelNodes[k].get_child(4).handValues)
+	#handLimit = LevelsDatabase.levelNodes[0].get_child(4).handValues.size()
+	pass
 
 static func _more_setters() -> void:
 	cardLevelOpenInit = false
