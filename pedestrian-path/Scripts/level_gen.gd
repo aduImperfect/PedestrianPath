@@ -1,5 +1,9 @@
 extends Node2D
 
+var veichleInitialX : float = 1000;
+var veichleInitialY : float = 360;
+var veichleOffsetY : float = 10;
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SaveLoadHelper._file_checker()
@@ -19,6 +23,7 @@ func _ready() -> void:
 
 	_spawn_levels()
 	_spawn_players()
+	_spawnEnemy()
 	#_spawn_cards()
 
 	for k in LevelsDatabase.levelsCount:
@@ -38,9 +43,13 @@ func _process(_delta: float) -> void:
 	pass
 
 func _spawnEnemy() -> void:
-	#PlayersHelper
-	pass
-	
+	PlayersHelper.vehicleCount = 10
+	for count in PlayersHelper.vehicleCount:
+		var instance = PlayersHelper.VEHICLE_SCENE.instantiate()
+		var randVal = randf_range(-10, 10)
+		instance.global_position = Vector2(veichleInitialX, veichleInitialY + (veichleOffsetY * randVal))
+		add_child(instance)
+		PlayersHelper.vehicleNodes.append(instance)
 
 func _spawn_levels() -> void:
 	#var j : int = 0

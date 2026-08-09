@@ -6,6 +6,9 @@ const PEDESTRIAN_SCENE = preload("res://Scenes/pedestrian.tscn")
 const GHOST_SCENE = preload("res://Scenes/ghost.tscn")
 
 static var playerNodes : Array[Node2D] = []
+static var pedestrianNodes : Array[Node2D] = []
+static var vehicleNodes : Array[Node2D] = []
+static var vehicleCount : int = 0
 static var playersCount : int = 0
 
 # Where ghost nodes get added as children (set by level_gen.gd)
