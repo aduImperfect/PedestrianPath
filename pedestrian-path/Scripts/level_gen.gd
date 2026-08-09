@@ -37,6 +37,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
+func _spawnEnemy() -> void:
+	#PlayersHelper
+	pass
+	
+
 func _spawn_levels() -> void:
 	#var j : int = 0
 	for k in LevelsDatabase.levelsCount:

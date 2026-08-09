@@ -1,6 +1,8 @@
 class_name PlayersHelper
 
 const PLAYER_SCENE = preload("res://Scenes/player.tscn")
+const VEHICLE_SCENE = preload("res://Scenes/vehicle.tscn")
+const PEDESTRIAN_SCENE = preload("res://Scenes/pedestrian.tscn")
 const GHOST_SCENE = preload("res://Scenes/ghost.tscn")
 
 static var playerNodes : Array[Node2D] = []
