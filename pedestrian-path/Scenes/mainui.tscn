@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bggqsrf8jqtby" path="res://Scripts/master_volume_h_slider_edit.gd" id="9_w0ycj"]
 [ext_resource type="Script" uid="uid://d4h5qnla4lsl5" path="res://Scripts/game_complete.gd" id="12_gfj6t"]
 [ext_resource type="Script" uid="uid://c7fgwbtflggel" path="res://Scripts/you_failed.gd" id="12_gim0o"]
+[ext_resource type="Script" uid="uid://c5gr11xpyrnxe" path="res://Scripts/coin_value.gd" id="12_tlp82"]
 
 [node name="MainUi" type="Node2D" unique_id=473959145]
 
@@ -89,9 +90,9 @@ script = ExtResource("7_c18ef")
 [node name="MasterVolumeHSliderTitle" type="TextEdit" parent="." unique_id=1472250107]
 z_index = 100
 custom_minimum_size = Vector2(100, 40)
-offset_left = -278.0
+offset_left = -201.0
 offset_top = -307.0
-offset_right = -178.0
+offset_right = -101.0
 offset_bottom = -267.0
 theme_override_font_sizes/font_size = 20
 text = "Volume:"
@@ -102,9 +103,9 @@ metadata/_edit_use_anchors_ = true
 [node name="MasterVolumeHSliderEdit" type="HSlider" parent="." unique_id=1652831052]
 z_index = 100
 custom_minimum_size = Vector2(150, 20)
-offset_left = -171.0
+offset_left = -94.0
 offset_top = -297.0
-offset_right = -21.0
+offset_right = 56.0
 offset_bottom = -277.0
 max_value = 1.0
 step = 0.01
@@ -136,4 +137,26 @@ theme_override_font_sizes/font_size = 40
 text = "YOU FAILED - TRY AGAIN (×_×)"
 editable = false
 script = ExtResource("12_gim0o")
+metadata/_edit_use_anchors_ = true
+
+[node name="CoinValueText" type="TextEdit" parent="." unique_id=1563327894]
+z_index = 100
+custom_minimum_size = Vector2(60, 40)
+offset_left = -450.0
+offset_top = -306.0
+offset_right = -390.0
+offset_bottom = -266.0
+text = "Coin: "
+editable = false
+metadata/_edit_use_anchors_ = true
+
+[node name="CoinValue" type="TextEdit" parent="." unique_id=1833256153]
+z_index = 100
+custom_minimum_size = Vector2(60, 40)
+offset_left = -381.0
+offset_top = -306.0
+offset_right = -321.0
+offset_bottom = -266.0
+editable = false
+script = ExtResource("12_tlp82")
 metadata/_edit_use_anchors_ = true

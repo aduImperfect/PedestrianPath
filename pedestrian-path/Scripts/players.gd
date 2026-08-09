@@ -11,6 +11,7 @@ static var vehicleNodes : Array[Node2D] = []
 static var pedestrianCount : int = 0
 static var vehicleCount : int = 0
 static var playersCount : int = 0
+static var coinCount : int = 0
 
 # Where ghost nodes get added as children (set by level_gen.gd)
 static var ghostContainer : Node2D = null

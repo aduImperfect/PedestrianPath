@@ -42,6 +42,8 @@ static func _player_death(body: Node2D) -> void:
 
 	body._start_new_run()
 	print("Player Died!")
+	YouFailed.showNow = true
+	PlayersHelper.coinCount = 0
 	for node in PlayersHelper.pedestrianNodes :
 		node.queue_free()
 	PlayersHelper.pedestrianNodes.clear()

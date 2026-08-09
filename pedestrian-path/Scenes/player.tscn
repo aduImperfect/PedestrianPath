@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dimuydj0242e4" path="res://Textures/Player0.png" id="2_cvnsp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6x6n"]
+size = Vector2(30, 30)
 
 [node name="Player" type="Node2D" unique_id=660980076]
 metadata/_edit_vertical_guides_ = [122.0]
@@ -12,16 +13,11 @@ metadata/_edit_vertical_guides_ = [122.0]
 collision_layer = 2
 script = ExtResource("1_cvnsp")
 gravity = 980.0
-select_action = "ui_select_p0"
-move_left_action = "ui_left_p0"
-move_right_action = "ui_right_p0"
-cancel_action = "ui_cancel_p0"
 lerpEnd = 1.0
 wallBounce = 100.0
 wallHitTimer = 0.5
 initializationAccumulationTime = 0.0670193333332842
 initializationAccumulationTimer = 0.25
-moveDir = null
 
 [node name="PlayerCS2D" type="CollisionShape2D" parent="PlayerCB2D" unique_id=2060292915]
 shape = SubResource("RectangleShape2D_m6x6n")
