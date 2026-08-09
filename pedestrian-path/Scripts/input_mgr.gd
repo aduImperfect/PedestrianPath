@@ -55,9 +55,7 @@ var run_start_global : Vector2 = Vector2.ZERO
 
 @export var moveDir : float = 0.0
 
-@export var upMoveMaxPos : float = -50
-@export var downMoveMaxPos : float = 150
-@export var moveSens : float = 1;
+var moveMaxPos : float = 50
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -178,13 +176,13 @@ func _input(_event: InputEvent) -> void:
 	#Highlight the left card index.
 	if _event.is_action_pressed(move_down_action):
 		(AudioDatabase.audioNodes[AudioDatabase.audio_styles_list_sttc[1]].get_child(0) as AudioStreamPlayer2D).play()
-		position.y -= downMoveMaxPos;
+		position.y -= moveMaxPos
 		print("down")
 
 	#Highlight the right card index.
 	if _event.is_action_pressed(move_up_action):
 		(AudioDatabase.audioNodes[AudioDatabase.audio_styles_list_sttc[1]].get_child(0) as AudioStreamPlayer2D).play()
-		position.y += upMoveMaxPos
+		position.y += moveMaxPos
 		print("up")
 
 func is_any_text_focused(node: Node) -> bool:
