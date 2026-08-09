@@ -176,13 +176,13 @@ func _input(_event: InputEvent) -> void:
 	#Highlight the left card index.
 	if _event.is_action_pressed(move_down_action):
 		(AudioDatabase.audioNodes[AudioDatabase.audio_styles_list_sttc[1]].get_child(0) as AudioStreamPlayer2D).play()
-		position.y -= moveMaxPos
+		position.y += moveMaxPos
 		print("down")
 
 	#Highlight the right card index.
 	if _event.is_action_pressed(move_up_action):
 		(AudioDatabase.audioNodes[AudioDatabase.audio_styles_list_sttc[1]].get_child(0) as AudioStreamPlayer2D).play()
-		position.y += moveMaxPos
+		position.y -= moveMaxPos
 		print("up")
 
 func is_any_text_focused(node: Node) -> bool:
