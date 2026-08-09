@@ -70,6 +70,8 @@ func _process(_delta: float) -> void:
 		return
 	_spawnVeichle()
 	_spawnPed()
+	if(InputMgr.global_position.y < 360):
+		PlayersHelper.coinCount -= 100
 	initializationCommplete = false
 
 func _spawnVeichle() -> void:

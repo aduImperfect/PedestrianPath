@@ -57,6 +57,8 @@ var run_start_global : Vector2 = Vector2.ZERO
 
 var moveMaxPos : float = 50
 
+var coinCount : int = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	initializationAccumulationTime = 0.0

@@ -9,3 +9,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	position.x -= speed * _delta
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.owner != null && body.owner.name.contains("Player") == false:
+		return
+	PlayersHelper.coinCount += 20
