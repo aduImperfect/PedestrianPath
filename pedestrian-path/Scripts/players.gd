@@ -8,6 +8,7 @@ const GHOST_SCENE = preload("res://Scenes/ghost.tscn")
 static var playerNodes : Array[Node2D] = []
 static var pedestrianNodes : Array[Node2D] = []
 static var vehicleNodes : Array[Node2D] = []
+static var pedestrianCount : int = 0
 static var vehicleCount : int = 0
 static var playersCount : int = 0
 
@@ -16,6 +17,7 @@ static var ghostContainer : Node2D = null
 
 # player_id -> Array[Ghost] currently alive for that player
 static var ghostsByPlayer : Dictionary = {}
+
 
 func _ready() -> void:
 	pass

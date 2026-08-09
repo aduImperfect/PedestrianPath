@@ -1,8 +1,16 @@
 extends Node2D
 
 var veichleInitialX : float = 1000;
-var veichleInitialY : float = 360;
+var veichleInitialY : float = 480;
 var veichleOffsetY : float = 10;
+
+var pedestrianInitialX : float = 1000;
+var pedestrianInitialY : float = 180;
+var pedestrianOffsetY : float = 10;
+
+var initializationAccumulationTime : float = 0.0
+var initializationAccumulationTimer : float = 10.0
+var initializationCommplete : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +31,6 @@ func _ready() -> void:
 
 	_spawn_levels()
 	_spawn_players()
-	_spawnEnemy()
 	#_spawn_cards()
 
 	for k in LevelsDatabase.levelsCount:
@@ -40,7 +47,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if initializationCommplete == false:
+		initializationAccumulationTime += _delta
+		if initializationAccumulationTime > initializationAccumulationTimer:
+			initializationAccumulationTime = 0.0
+			initializationCommplete = true
+		return
+	_spawnEnemy()
+	_spawnPed()
+	initializationCommplete = false
 
 func _spawnEnemy() -> void:
 	PlayersHelper.vehicleCount = 10
@@ -49,7 +64,16 @@ func _spawnEnemy() -> void:
 		var randVal = randf_range(-10, 10)
 		instance.global_position = Vector2(veichleInitialX, veichleInitialY + (veichleOffsetY * randVal))
 		add_child(instance)
-		PlayersHelper.vehicleNodes.append(instance)
+		PlayersHelper.vehicleNodes.append(instance)		
+
+func _spawnPed() -> void:
+	PlayersHelper.pedestrianCount = 10
+	for count in PlayersHelper.pedestrianCount:
+		var instance = PlayersHelper.PEDESTRIAN_SCENE.instantiate()
+		var randVal = randf_range(-10, 10)
+		instance.global_position = Vector2(pedestrianInitialX, pedestrianInitialY + (pedestrianOffsetY * randVal))
+		add_child(instance)
+		PlayersHelper.pedestrianNodes.append(instance)
 
 func _spawn_levels() -> void:
 	#var j : int = 0
