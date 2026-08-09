@@ -19,7 +19,7 @@ func _ready() -> void:
 
 	_spawn_levels()
 	_spawn_players()
-	_spawn_cards()
+	#_spawn_cards()
 
 	for k in LevelsDatabase.levelsCount:
 		if k == 0:
