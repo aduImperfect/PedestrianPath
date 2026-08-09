@@ -19,7 +19,7 @@ shape = SubResource("RectangleShape2D_m6x6n")
 debug_color = Color(0.58187073, 0.382447, 1, 0.41960785)
 
 [node name="Vehicle" type="Sprite2D" parent="VehicleA2D" unique_id=2145661472]
-scale = Vector2(0.025, 0.025)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_hvehr")
 
 [node name="Death" parent="VehicleA2D" unique_id=1296578022 instance=ExtResource("3_kglda")]
