@@ -152,7 +152,7 @@ static func _level_switcher(newLevelNum : int = -1) -> void:
 		PlayersHelper.playerNodes[k].get_child(0).new_position = PlayersHelper.playerNodes[k].get_child(0).position
 		InputsData.move_speed = 0.0
 
-	CardsHelper._level_switching_values()
+	#CardsHelper._level_switching_values()
 
 	for k in LevelsDatabase.levelsCount:
 		if k == LevelsDatabase.currLevel:
@@ -164,7 +164,7 @@ static func _level_switcher(newLevelNum : int = -1) -> void:
 	#CameraHelper.camera_position = LevelsDatabase.levelNodes[LevelsDatabase.currLevel].get_child(1).global_position
 
 	LevelsDatabase.levelNodes[LevelsDatabase.currLevel].get_child(1).set_deferred("monitoring", true)
-	CountdownData.countdownVal = LevelsDatabase.levelNodes[LevelsDatabase.currLevel].get_child(4).countdownVal
+	#CountdownData.countdownVal = LevelsDatabase.levelNodes[LevelsDatabase.currLevel].get_child(4).countdownVal
 
 	SaveLoadHelper.save_game()
 	print("---------------")
