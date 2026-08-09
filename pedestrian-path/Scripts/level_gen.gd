@@ -49,6 +49,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	
+	for node in PlayersHelper.pedestrianNodes :
+		if node.get_child(0).global_position.x < -50.0:
+			node.queue_free()
+	
+	for node in PlayersHelper.vehicleNodes :
+		if node.get_child(0).global_position.x < -50.0:
+			node.queue_free()
+	
 	if initializationCommplete == false:
 		initializationAccumulationTime += _delta
 		if initializationAccumulationTime > initializationAccumulationTimer:
@@ -65,8 +74,9 @@ func _spawnVeichle() -> void:
 		var instance = PlayersHelper.VEHICLE_SCENE.instantiate()
 		var randVal = randf_range(-10, 10)
 		instance.global_position = Vector2(veichleInitialX, veichleInitialY + (veichleOffsetY * randVal))
+		instance.name = "Vehicle_" + str(PlayersHelper.vehicleNodes.size());
 		add_child(instance)
-		PlayersHelper.vehicleNodes.append(instance)		
+		PlayersHelper.vehicleNodes.append(instance)
 
 func _spawnPed() -> void:
 	PlayersHelper.pedestrianCount = 4
@@ -74,6 +84,7 @@ func _spawnPed() -> void:
 		var instance = PlayersHelper.PEDESTRIAN_SCENE.instantiate()
 		var randVal = randf_range(-10, 10)
 		instance.global_position = Vector2(pedestrianInitialX, pedestrianInitialY + (pedestrianOffsetY * randVal))
+		instance.name = "Pedestrian_" + str(PlayersHelper.pedestrianNodes.size());
 		add_child(instance)
 		PlayersHelper.pedestrianNodes.append(instance)
 
