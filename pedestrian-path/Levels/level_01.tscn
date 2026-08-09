@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://b36n3qasn3g46" path="res://Scenes/ground.tscn" id="1_vk57k"]
 [ext_resource type="PackedScene" uid="uid://c2gstpkex2tx8" path="res://Scenes/goal.tscn" id="2_8ffim"]
 [ext_resource type="PackedScene" uid="uid://dbswmh8aba0vb" path="res://Scenes/start.tscn" id="3_xfk5q"]
-[ext_resource type="PackedScene" uid="uid://c7kw2s1jyomna" path="res://Scenes/death.tscn" id="4_1cq4g"]
 [ext_resource type="Script" uid="uid://dahduxurndjxb" path="res://Scripts/cards_legend.gd" id="7_5royd"]
 [ext_resource type="Script" uid="uid://brm214bf62dhj" path="res://Scripts/textmousemgr.gd" id="7_ale55"]
 [ext_resource type="Script" uid="uid://cvwk4rl41evja" path="res://Scripts/welcome.gd" id="9_3ro2k"]
@@ -15,10 +14,6 @@ position = Vector2(73, 381)
 
 [node name="Goal" parent="." unique_id=1634378711 instance=ExtResource("2_8ffim")]
 position = Vector2(1195, 382)
-
-[node name="Death" parent="." unique_id=1296578022 instance=ExtResource("4_1cq4g")]
-position = Vector2(920, 750)
-scale = Vector2(100, 1)
 
 [node name="Ground_W_R_2" parent="." unique_id=1751980 instance=ExtResource("1_vk57k")]
 position = Vector2(20, 362)
