@@ -31,6 +31,8 @@ func _ready() -> void:
 
 	_spawn_levels()
 	_spawn_players()
+	_spawnVeichle()
+	_spawnPed()
 	#_spawn_cards()
 
 	for k in LevelsDatabase.levelsCount:
