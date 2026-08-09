@@ -28,10 +28,6 @@ scale = Vector2(1, 18)
 position = Vector2(1260, 360)
 scale = Vector2(1, 18)
 
-[node name="Ground_P_7" parent="." unique_id=852924870 instance=ExtResource("1_vk57k")]
-position = Vector2(641.00006, 414)
-scale = Vector2(30, 1)
-
 [node name="Ground_P_8" parent="." unique_id=2105888604 instance=ExtResource("1_vk57k")]
 position = Vector2(640.00006, 700)
 scale = Vector2(30, 1)
@@ -62,11 +58,11 @@ script = ExtResource("7_5royd")
 
 [node name="Welcome" type="TextEdit" parent="." unique_id=421623875]
 z_index = 100
-custom_minimum_size = Vector2(350, 120)
-offset_left = 448.0
-offset_top = 155.0
-offset_right = 798.0
-offset_bottom = 275.0
+custom_minimum_size = Vector2(350, 50)
+offset_left = 453.0
+offset_top = 54.0
+offset_right = 803.0
+offset_bottom = 104.0
 theme_override_colors/background_color = Color(0.2509804, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "WELCOME TO PEDESTRIAN PATH"
