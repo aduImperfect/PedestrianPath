@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dbswmh8aba0vb"]
+
+[ext_resource type="Texture2D" uid="uid://bilaakaefufur" path="res://Textures/Start.png" id="1_3bxa3"]
+
+[node name="Start" type="Node2D" unique_id=1470424718]
+
+[node name="Start" type="Sprite2D" parent="." unique_id=957139478]
+z_index = -5
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("1_3bxa3")

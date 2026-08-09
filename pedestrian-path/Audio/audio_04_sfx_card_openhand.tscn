@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dsc4pp02ks66k"]
+
+[ext_resource type="AudioStream" uid="uid://x3sln41awk7l" path="res://Audio/Audio_04_SFX_Kenney_Interface_Maximize_008.ogg" id="1_44oqq"]
+[ext_resource type="Script" uid="uid://db1rtdwaln5qf" path="res://Scripts/audio_player.gd" id="2_20e1a"]
+
+[node name="Audio_04_Sfx_Card_Openhand" type="Node2D" unique_id=139911936]
+
+[node name="AP2D" type="AudioStreamPlayer2D" parent="." unique_id=1441823629]
+stream = ExtResource("1_44oqq")
+script = ExtResource("2_20e1a")

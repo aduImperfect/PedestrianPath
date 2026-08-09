@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://csqon6ppn8866"]
+
+[ext_resource type="AudioStream" uid="uid://odadbj207xgn" path="res://Audio/Audio_06_SFX_Kenney_Interface_Question_004.ogg" id="1_a30x6"]
+[ext_resource type="Script" uid="uid://db1rtdwaln5qf" path="res://Scripts/audio_player.gd" id="2_e66fu"]
+
+[node name="Audio_06_Sfx_Arrived_Goal" type="Node2D" unique_id=139911936]
+
+[node name="AP2D" type="AudioStreamPlayer2D" parent="." unique_id=1441823629]
+stream = ExtResource("1_a30x6")
+script = ExtResource("2_e66fu")

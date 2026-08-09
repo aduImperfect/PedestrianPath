@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://7q2kb6d0dbff"]
+
+[ext_resource type="PackedScene" uid="uid://dbswmh8aba0vb" path="res://Scenes/start.tscn" id="1_2qs01"]
+[ext_resource type="PackedScene" uid="uid://c2gstpkex2tx8" path="res://Scenes/goal.tscn" id="2_iel4d"]
+[ext_resource type="PackedScene" uid="uid://o11jqegfw74n" path="res://Scenes/campos.tscn" id="3_6mfy8"]
+[ext_resource type="PackedScene" uid="uid://b36n3qasn3g46" path="res://Scenes/ground.tscn" id="3_i2y1e"]
+[ext_resource type="PackedScene" uid="uid://c7kw2s1jyomna" path="res://Scenes/death.tscn" id="4_bsxbt"]
+[ext_resource type="PackedScene" uid="uid://cewwvkacexvk2" path="res://Scenes/cardvalues.tscn" id="6_1nift"]
+[ext_resource type="Script" uid="uid://brm214bf62dhj" path="res://Scripts/textmousemgr.gd" id="7_ffslo"]
+[ext_resource type="Script" uid="uid://dahduxurndjxb" path="res://Scripts/cards_legend.gd" id="7_hv8fo"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ffslo"]
+
+[node name="Level_02" type="Node2D" unique_id=1163223301]
+
+[node name="Start" parent="." unique_id=1470424718 instance=ExtResource("1_2qs01")]
+position = Vector2(272, 363)
+
+[node name="Goal" parent="." unique_id=1634378711 instance=ExtResource("2_iel4d")]
+position = Vector2(977, 325)
+
+[node name="Death" parent="." unique_id=1296578022 instance=ExtResource("4_bsxbt")]
+position = Vector2(642.00006, 665)
+scale = Vector2(60, 1)
+
+[node name="Campos" parent="." unique_id=952399795 instance=ExtResource("3_6mfy8")]
+position = Vector2(678, 190)
+
+[node name="CardValues" parent="." unique_id=1516587373 instance=ExtResource("6_1nift")]
+handValues = Array[int]([1, 4, 1])
+countdownVal = 2
+
+[node name="Ground_W_R_2" parent="." unique_id=1751980 instance=ExtResource("3_i2y1e")]
+position = Vector2(21, 363)
+scale = Vector2(1, 18)
+
+[node name="Ground_W_R_3" parent="." unique_id=214894708 instance=ExtResource("3_i2y1e")]
+position = Vector2(1261, 361)
+scale = Vector2(1, 18)
+
+[node name="Ground_P_5" parent="." unique_id=350770238 instance=ExtResource("3_i2y1e")]
+position = Vector2(627, 355)
+scale = Vector2(8, 1)
+
+[node name="Ground_P_8" parent="." unique_id=1710634279 instance=ExtResource("3_i2y1e")]
+position = Vector2(887, 355)
+scale = Vector2(5, 1)
+
+[node name="Ground_P_7" parent="." unique_id=248651494 instance=ExtResource("3_i2y1e")]
+position = Vector2(364, 395)
+scale = Vector2(5, 1)
+
+[node name="LevelObjective" type="TextEdit" parent="." unique_id=512979000]
+offset_left = 60.0
+offset_top = 275.0
+offset_right = 260.0
+offset_bottom = 315.0
+text = "Jump good practice."
+editable = false
+script = ExtResource("7_ffslo")
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelEnd" type="TextEdit" parent="." unique_id=1581963938]
+offset_left = 1005.0
+offset_top = 251.0
+offset_right = 1065.0
+offset_bottom = 291.0
+text = "Nice."
+editable = false
+script = ExtResource("7_ffslo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ground_P_9" parent="." unique_id=340516949 instance=ExtResource("3_i2y1e")]
+position = Vector2(641.00006, 700)
+scale = Vector2(30, 1)
+
+[node name="Ground_P_10" parent="." unique_id=624409404 instance=ExtResource("3_i2y1e")]
+position = Vector2(638.00006, 21)
+scale = Vector2(30, 1)
+
+[node name="CardsLegend" type="TextEdit" parent="." unique_id=945928845]
+z_index = -100
+offset_left = 930.0
+offset_top = 50.0
+offset_right = 1230.0
+offset_bottom = 200.0
+text = "Cards Legend (Scroll for Controls):
+🗲 = Deck BG
+🡢 = Move Forward
+🡠 = Move Backward
+↗ = Jump Forward
+↑ = Jump Upward
+Controls (Keyboard | Controller):
+🡠,🡢 Keys | D-pad | Axis = Highlight
+➖ | A | X | RT = Long Press Select"
+editable = false
+script = ExtResource("7_hv8fo")
+
+[node name="CardsBG" type="TextureRect" parent="." unique_id=1560152701]
+modulate = Color(1, 0.45490196, 1, 1)
+self_modulate = Color(0.42745098, 0.41568628, 0.38039216, 1)
+show_behind_parent = true
+z_index = -700
+offset_left = 148.0
+offset_top = 575.0
+offset_right = 948.0
+offset_bottom = 664.0
+texture = SubResource("CanvasTexture_ffslo")

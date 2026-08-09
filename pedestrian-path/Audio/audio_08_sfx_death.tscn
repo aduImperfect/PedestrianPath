@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://78uuwbryb7lk"]
+
+[ext_resource type="AudioStream" uid="uid://depbjbmhv3h4k" path="res://Audio/Audio_08_SFX_Kenney_Interface_Error_003.ogg" id="1_2l8q5"]
+[ext_resource type="Script" uid="uid://db1rtdwaln5qf" path="res://Scripts/audio_player.gd" id="2_n7n33"]
+
+[node name="Audio_06_Sfx_Death" type="Node2D" unique_id=139911936]
+
+[node name="AP2D" type="AudioStreamPlayer2D" parent="." unique_id=1441823629]
+stream = ExtResource("1_2l8q5")
+script = ExtResource("2_n7n33")

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://o11jqegfw74n"]
+
+[ext_resource type="Script" uid="uid://bq3fvcqrw3gtu" path="res://Scripts/campos.gd" id="1_ucsyf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h3lw"]
+
+[node name="Campos" type="Node2D" unique_id=952399795]
+
+[node name="CamposA2D" type="Area2D" parent="." unique_id=915614423]
+z_index = -100
+collision_mask = 3
+script = ExtResource("1_ucsyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CamposA2D" unique_id=734156791]
+shape = SubResource("RectangleShape2D_0h3lw")
+debug_color = Color(0.6577451, 0.32236987, 1, 0.41960785)

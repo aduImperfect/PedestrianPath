@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://c77r7x2qkwv7r"]
+
+[ext_resource type="PackedScene" uid="uid://dbswmh8aba0vb" path="res://Scenes/start.tscn" id="1_1vin3"]
+[ext_resource type="PackedScene" uid="uid://o11jqegfw74n" path="res://Scenes/campos.tscn" id="2_f3lte"]
+[ext_resource type="PackedScene" uid="uid://c2gstpkex2tx8" path="res://Scenes/goal.tscn" id="2_ojpmh"]
+[ext_resource type="PackedScene" uid="uid://b36n3qasn3g46" path="res://Scenes/ground.tscn" id="3_703nv"]
+[ext_resource type="PackedScene" uid="uid://c7kw2s1jyomna" path="res://Scenes/death.tscn" id="4_gff3n"]
+[ext_resource type="PackedScene" uid="uid://cewwvkacexvk2" path="res://Scenes/cardvalues.tscn" id="6_i7vav"]
+[ext_resource type="Script" uid="uid://dahduxurndjxb" path="res://Scripts/cards_legend.gd" id="7_5wetp"]
+[ext_resource type="Script" uid="uid://d3rp7xccacv4g" path="res://Scripts/mover.gd" id="7_armlc"]
+[ext_resource type="Script" uid="uid://brm214bf62dhj" path="res://Scripts/textmousemgr.gd" id="7_p0x8g"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_p0x8g"]
+
+[node name="Level_03" type="Node2D" unique_id=1762506268]
+
+[node name="Start" parent="." unique_id=1470424718 instance=ExtResource("1_1vin3")]
+position = Vector2(59, 377)
+
+[node name="Goal" parent="." unique_id=1634378711 instance=ExtResource("2_ojpmh")]
+position = Vector2(1129, 443)
+
+[node name="Death" parent="." unique_id=1296578022 instance=ExtResource("4_gff3n")]
+position = Vector2(642.00006, 665)
+scale = Vector2(60, 1)
+
+[node name="Campos" parent="." unique_id=952399795 instance=ExtResource("2_f3lte")]
+position = Vector2(678, 190)
+
+[node name="CardValues" parent="." unique_id=1516587373 instance=ExtResource("6_i7vav")]
+handValues = Array[int]([1, 4, 4, 1, 1, 2, 3, 4])
+countdownVal = 6
+
+[node name="Ground_W_R_2" parent="." unique_id=1751980 instance=ExtResource("3_703nv")]
+position = Vector2(21, 363)
+scale = Vector2(1, 18)
+
+[node name="Ground_W_R_3" parent="." unique_id=1323924261 instance=ExtResource("3_703nv")]
+position = Vector2(1261, 361)
+scale = Vector2(1, 18)
+
+[node name="Ground_P_5" parent="." unique_id=1348498635 instance=ExtResource("3_703nv")]
+position = Vector2(425, 480)
+scale = Vector2(2, 1)
+
+[node name="Ground_P_6" parent="." unique_id=1533128158 instance=ExtResource("3_703nv")]
+position = Vector2(519, 357)
+scale = Vector2(4, 1)
+
+[node name="Ground_P_16" parent="." unique_id=1704762492 instance=ExtResource("3_703nv")]
+position = Vector2(624.00006, 480)
+scale = Vector2(5, 1)
+
+[node name="Ground_P_8" parent="." unique_id=1709120753 instance=ExtResource("3_703nv")]
+position = Vector2(827, 340)
+scale = Vector2(1, 8)
+
+[node name="Ground_P_12" parent="." unique_id=644116827 instance=ExtResource("3_703nv")]
+position = Vector2(620, 316)
+
+[node name="Ground_P_15" parent="." unique_id=2099953972 instance=ExtResource("3_703nv")]
+position = Vector2(369, 397)
+scale = Vector2(1, 4)
+
+[node name="Ground_P_14" parent="." unique_id=58414328 instance=ExtResource("3_703nv")]
+position = Vector2(330, 372)
+
+[node name="Ground_P_11" parent="." unique_id=693873029 instance=ExtResource("3_703nv")]
+position = Vector2(1033, 477)
+scale = Vector2(6, 1)
+
+[node name="Ground_P_13" parent="." unique_id=1646154685 instance=ExtResource("3_703nv")]
+position = Vector2(310, 412)
+rotation = -1.5707964
+scale = Vector2(1, 2)
+
+[node name="Ground_P_17" parent="." unique_id=658759913 instance=ExtResource("3_703nv")]
+position = Vector2(734, 460)
+scale = Vector2(0.5, 2)
+
+[node name="Ground_P_17_Mover" parent="." unique_id=329650436 instance=ExtResource("3_703nv")]
+position = Vector2(783, 160)
+script = ExtResource("7_armlc")
+travelPoss = Array[Vector2]([Vector2(783, 160), Vector2(783, 400), Vector2(624, 400)])
+
+[node name="Ground_P_18" parent="." unique_id=431742828 instance=ExtResource("3_703nv")]
+position = Vector2(1173, 437.00003)
+scale = Vector2(1, 3)
+
+[node name="Ground_P_7" parent="." unique_id=216681752 instance=ExtResource("3_703nv")]
+position = Vector2(156, 412)
+scale = Vector2(6, 1)
+
+[node name="LevelObjective" type="TextEdit" parent="." unique_id=434621396]
+offset_left = 76.0
+offset_top = 255.0
+offset_right = 206.0
+offset_bottom = 295.0
+text = "Go Figure! 😈"
+editable = false
+script = ExtResource("7_p0x8g")
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelEnd" type="TextEdit" parent="." unique_id=1947659586]
+offset_left = 986.0
+offset_top = 383.0
+offset_right = 1136.0
+offset_bottom = 423.0
+text = "You Figured! 😱"
+editable = false
+script = ExtResource("7_p0x8g")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ground_P_9" parent="." unique_id=31122729 instance=ExtResource("3_703nv")]
+position = Vector2(641.00006, 700)
+scale = Vector2(30, 1)
+
+[node name="Ground_P_10" parent="." unique_id=2051624496 instance=ExtResource("3_703nv")]
+position = Vector2(638.00006, 21)
+scale = Vector2(30, 1)
+
+[node name="CardsLegend" type="TextEdit" parent="." unique_id=650895158]
+z_index = -100
+offset_left = 930.0
+offset_top = 50.0
+offset_right = 1230.0
+offset_bottom = 200.0
+text = "Cards Legend (Scroll for Controls):
+🗲 = Deck BG
+🡢 = Move Forward
+🡠 = Move Backward
+↗ = Jump Forward
+↑ = Jump Upward
+Controls (Keyboard | Controller):
+🡠,🡢 Keys | D-pad | Axis = Highlight
+➖ | A | X | RT = Long Press Select"
+editable = false
+script = ExtResource("7_5wetp")
+
+[node name="CardsBG" type="TextureRect" parent="." unique_id=1431060833]
+modulate = Color(1, 0.45490196, 1, 1)
+self_modulate = Color(0.42745098, 0.41568628, 0.38039216, 1)
+show_behind_parent = true
+z_index = -700
+offset_left = 148.0
+offset_top = 575.0
+offset_right = 948.0
+offset_bottom = 664.0
+texture = SubResource("CanvasTexture_p0x8g")

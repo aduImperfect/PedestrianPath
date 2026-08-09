@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bx8dt6gjprmjj"]
+
+[ext_resource type="Script" uid="uid://0gy1c671ri22" path="res://Scripts/camera_singleplayer.gd" id="1_cl3b8"]
+[ext_resource type="PackedScene" uid="uid://difmoi1dld25r" path="res://Scenes/background.tscn" id="2_744m0"]
+[ext_resource type="PackedScene" uid="uid://dl4i8yvjvkeqn" path="res://Scenes/mainui.tscn" id="3_thagc"]
+
+[node name="SinglePlayerMode" type="Node2D" unique_id=1898326181]
+
+[node name="SPCam" type="Camera2D" parent="." unique_id=120547439]
+script = ExtResource("1_cl3b8")
+
+[node name="Background" parent="SPCam" unique_id=1958889540 instance=ExtResource("2_744m0")]
+
+[node name="MainUi" parent="SPCam" unique_id=473959145 instance=ExtResource("3_thagc")]

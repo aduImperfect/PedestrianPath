@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bwduk6rd3o78w"]
+
+[ext_resource type="AudioStream" uid="uid://dum88ka11tmgw" path="res://Audio/Audio_09_SFX_Kenney_Interface_Back_003.ogg" id="1_5iry3"]
+[ext_resource type="Script" uid="uid://db1rtdwaln5qf" path="res://Scripts/audio_player.gd" id="2_jarsu"]
+
+[node name="Audio_06_Sfx_Forward_Jump" type="Node2D" unique_id=139911936]
+
+[node name="AP2D" type="AudioStreamPlayer2D" parent="." unique_id=1441823629]
+stream = ExtResource("1_5iry3")
+script = ExtResource("2_jarsu")

@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://d1fd0qf5pl5af"]
+
+[ext_resource type="PackedScene" uid="uid://b36n3qasn3g46" path="res://Scenes/ground.tscn" id="1_vk57k"]
+[ext_resource type="PackedScene" uid="uid://c2gstpkex2tx8" path="res://Scenes/goal.tscn" id="2_8ffim"]
+[ext_resource type="PackedScene" uid="uid://dbswmh8aba0vb" path="res://Scenes/start.tscn" id="3_xfk5q"]
+[ext_resource type="PackedScene" uid="uid://c7kw2s1jyomna" path="res://Scenes/death.tscn" id="4_1cq4g"]
+[ext_resource type="PackedScene" uid="uid://o11jqegfw74n" path="res://Scenes/campos.tscn" id="4_ocwms"]
+[ext_resource type="PackedScene" uid="uid://cewwvkacexvk2" path="res://Scenes/cardvalues.tscn" id="6_pbphk"]
+[ext_resource type="Script" uid="uid://dahduxurndjxb" path="res://Scripts/cards_legend.gd" id="7_5royd"]
+[ext_resource type="Script" uid="uid://brm214bf62dhj" path="res://Scripts/textmousemgr.gd" id="7_ale55"]
+[ext_resource type="Script" uid="uid://cvwk4rl41evja" path="res://Scripts/welcome.gd" id="9_3ro2k"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3ro2k"]
+
+[node name="Level_01" type="Node2D" unique_id=234875700]
+
+[node name="Start" parent="." unique_id=1470424718 instance=ExtResource("3_xfk5q")]
+position = Vector2(73, 381)
+
+[node name="Goal" parent="." unique_id=1634378711 instance=ExtResource("2_8ffim")]
+position = Vector2(1195, 382)
+
+[node name="Death" parent="." unique_id=1296578022 instance=ExtResource("4_1cq4g")]
+position = Vector2(920, 750)
+scale = Vector2(100, 1)
+
+[node name="Campos" parent="." unique_id=952399795 instance=ExtResource("4_ocwms")]
+position = Vector2(641, 152)
+
+[node name="CardValues" parent="." unique_id=1516587373 instance=ExtResource("6_pbphk")]
+handValues = Array[int]([1, 1])
+countdownVal = 2
+
+[node name="Ground_W_R_2" parent="." unique_id=1751980 instance=ExtResource("1_vk57k")]
+position = Vector2(20, 362)
+scale = Vector2(1, 18)
+
+[node name="Ground_W_R_3" parent="." unique_id=1153429463 instance=ExtResource("1_vk57k")]
+position = Vector2(1260, 360)
+scale = Vector2(1, 18)
+
+[node name="Ground_P_7" parent="." unique_id=852924870 instance=ExtResource("1_vk57k")]
+position = Vector2(641.00006, 414)
+scale = Vector2(30, 1)
+
+[node name="Ground_P_8" parent="." unique_id=2105888604 instance=ExtResource("1_vk57k")]
+position = Vector2(640.00006, 700)
+scale = Vector2(30, 1)
+
+[node name="Ground_P_9" parent="." unique_id=238357404 instance=ExtResource("1_vk57k")]
+position = Vector2(640.00006, 22)
+scale = Vector2(30, 1)
+
+[node name="LevelEnd" type="TextEdit" parent="." unique_id=357667467]
+offset_left = 1019.0
+offset_top = 271.0
+offset_right = 1219.0
+offset_bottom = 312.0
+text = "You're learning. ಠ╭╮ಠ"
+editable = false
+script = ExtResource("7_ale55")
+
+[node name="LevelObjective" type="TextEdit" parent="." unique_id=948582256]
+offset_left = 65.0
+offset_top = 251.0
+offset_right = 302.0
+offset_bottom = 299.0
+text = "Use the cards to move! (ง'̀-'́)ง"
+editable = false
+script = ExtResource("7_ale55")
+
+[node name="CardsLegend" type="TextEdit" parent="." unique_id=138583198]
+z_index = -100
+offset_left = 930.0
+offset_top = 50.0
+offset_right = 1230.0
+offset_bottom = 200.0
+text = "Cards Legend (Scroll for Controls):
+🗲 = Deck BG
+🡢 = Move Forward
+🡠 = Move Backward
+↗ = Jump Forward
+↑ = Jump Upward
+Controls (Keyboard | Controller):
+🡠,🡢 Keys | D-pad | Axis = Highlight
+➖ | A | X | RT = Long Press Select"
+editable = false
+script = ExtResource("7_5royd")
+
+[node name="Welcome" type="TextEdit" parent="." unique_id=421623875]
+z_index = 100
+custom_minimum_size = Vector2(350, 120)
+offset_left = 448.0
+offset_top = 155.0
+offset_right = 798.0
+offset_bottom = 275.0
+theme_override_colors/background_color = Color(0.2509804, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "     WELCOME TO CARDFORMER
+           🃜🃚🃖🃁🂭🂺 AKA 🧩🧩🧩
+THE CARD BASED PLATFORMER!!"
+editable = false
+wrap_mode = 1
+script = ExtResource("9_3ro2k")
+
+[node name="CardsBG" type="TextureRect" parent="." unique_id=497918915]
+modulate = Color(1, 0.45490196, 1, 1)
+self_modulate = Color(0.42745098, 0.41568628, 0.38039216, 1)
+show_behind_parent = true
+z_index = -700
+offset_left = 148.0
+offset_top = 575.0
+offset_right = 948.0
+offset_bottom = 664.0
+texture = SubResource("CanvasTexture_3ro2k")

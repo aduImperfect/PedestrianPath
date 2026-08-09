@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c7kw2s1jyomna"]
+
+[ext_resource type="Script" uid="uid://cwqrom03rh7uq" path="res://Scripts/death.gd" id="1_g62mh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mna5k"]
+
+[node name="Death" type="Node2D" unique_id=1296578022]
+
+[node name="DeathA2D" type="Area2D" parent="." unique_id=1829092928]
+z_index = -100
+collision_mask = 3
+script = ExtResource("1_g62mh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathA2D" unique_id=432063238]
+shape = SubResource("RectangleShape2D_mna5k")
+debug_color = Color(0.6577451, 0.32236987, 1, 0.41960785)
+
+[connection signal="body_entered" from="DeathA2D" to="DeathA2D" method="_on_body_entered"]

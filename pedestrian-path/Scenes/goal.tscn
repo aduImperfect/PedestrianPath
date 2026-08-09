@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c2gstpkex2tx8"]
+
+[ext_resource type="Texture2D" uid="uid://bd04rh53way1t" path="res://Textures/Goal.png" id="1_paeek"]
+[ext_resource type="Script" uid="uid://b80kqek86xt3o" path="res://Scripts/goal.gd" id="1_s0pnd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6x6n"]
+
+[node name="Goal" type="Node2D" unique_id=1634378711]
+
+[node name="GoalA2D" type="Area2D" parent="." unique_id=1055000855]
+collision_mask = 3
+script = ExtResource("1_s0pnd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalA2D" unique_id=672286988]
+shape = SubResource("RectangleShape2D_m6x6n")
+debug_color = Color(0.6577451, 0.32236987, 1, 0.41960785)
+
+[node name="Goal" type="Sprite2D" parent="GoalA2D" unique_id=1220398738]
+z_index = -2
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("1_paeek")
+
+[connection signal="body_entered" from="GoalA2D" to="GoalA2D" method="_on_body_entered"]

@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://dl4i8yvjvkeqn"]
+
+[ext_resource type="Script" uid="uid://t5oxbadud4gt" path="res://Scripts/fps_counter.gd" id="1_6c4uu"]
+[ext_resource type="Script" uid="uid://bvqxwi2mvqhni" path="res://Scripts/num_players.gd" id="2_hpdrm"]
+[ext_resource type="Script" uid="uid://cijbrr2a2n6y6" path="res://Scripts/current_level_edit.gd" id="3_c18ef"]
+[ext_resource type="Script" uid="uid://g73dopxot7ik" path="res://Scripts/begin_delay_current.gd" id="4_w0ycj"]
+[ext_resource type="Script" uid="uid://cptddcsxoynhk" path="res://Scripts/current_input.gd" id="5_crvle"]
+[ext_resource type="Script" uid="uid://ddg7ffn2ieyqp" path="res://Scripts/gamepad_in_use.gd" id="6_01wry"]
+[ext_resource type="Script" uid="uid://d38otohypmlcg" path="res://Scripts/cam_smoothing_edit.gd" id="7_c18ef"]
+[ext_resource type="Script" uid="uid://bgcrfnart1b1t" path="res://Scripts/master_volume_h_slider_title.gd" id="8_w0ycj"]
+[ext_resource type="Script" uid="uid://bggqsrf8jqtby" path="res://Scripts/master_volume_h_slider_edit.gd" id="9_w0ycj"]
+[ext_resource type="Script" uid="uid://brm214bf62dhj" path="res://Scripts/textmousemgr.gd" id="10_01wry"]
+[ext_resource type="Script" uid="uid://c7qyd8lsep52k" path="res://Scripts/countdown_timer.gd" id="10_crvle"]
+[ext_resource type="Script" uid="uid://d4h5qnla4lsl5" path="res://Scripts/game_complete.gd" id="12_gfj6t"]
+[ext_resource type="Script" uid="uid://c7fgwbtflggel" path="res://Scripts/you_failed.gd" id="12_gim0o"]
+
+[node name="MainUi" type="Node2D" unique_id=473959145]
+
+[node name="FPSCounter" type="TextEdit" parent="." unique_id=601955518]
+z_index = 100
+custom_minimum_size = Vector2(100, 40)
+offset_left = -560.0
+offset_top = -305.0
+offset_right = -460.0
+offset_bottom = -285.0
+script = ExtResource("1_6c4uu")
+
+[node name="NumPlayers" type="TextEdit" parent="." unique_id=2083542118]
+visible = false
+z_index = 100
+custom_minimum_size = Vector2(200, 40)
+offset_left = -558.0
+offset_top = -255.0
+offset_right = -358.0
+offset_bottom = -215.0
+script = ExtResource("2_hpdrm")
+
+[node name="CurrentLevelEdit" type="TextEdit" parent="." unique_id=596001624]
+z_index = 100
+custom_minimum_size = Vector2(50, 40)
+offset_left = -446.0
+offset_top = -305.0
+offset_right = -346.0
+offset_bottom = -265.0
+script = ExtResource("3_c18ef")
+
+[node name="BeginDelayCurrent" type="TextEdit" parent="." unique_id=851112648]
+visible = false
+z_index = 100
+custom_minimum_size = Vector2(200, 40)
+offset_left = -227.0
+offset_top = -305.0
+offset_right = -27.0
+offset_bottom = -265.0
+script = ExtResource("4_w0ycj")
+
+[node name="CurrentInput" type="TextEdit" parent="." unique_id=1524028920]
+visible = false
+z_index = 100
+custom_minimum_size = Vector2(399, 80)
+offset_left = -557.0
+offset_top = -211.0
+offset_right = -158.0
+offset_bottom = -131.0
+script = ExtResource("5_crvle")
+
+[node name="GamepadInUse" type="TextEdit" parent="." unique_id=1735564947]
+visible = false
+z_index = 100
+custom_minimum_size = Vector2(200, 40)
+offset_left = -559.0
+offset_top = -260.0
+offset_right = -359.0
+offset_bottom = -220.0
+script = ExtResource("6_01wry")
+
+[node name="CamSmoothingEdit" type="TextEdit" parent="." unique_id=1992169720]
+visible = false
+z_index = 100
+custom_minimum_size = Vector2(200, 40)
+offset_left = -540.0
+offset_top = 72.0
+offset_right = -340.0
+offset_bottom = 112.0
+script = ExtResource("7_c18ef")
+
+[node name="MasterVolumeHSliderTitle" type="TextEdit" parent="." unique_id=1472250107]
+z_index = 100
+custom_minimum_size = Vector2(40, 40)
+offset_left = -225.0
+offset_top = -307.0
+offset_right = -185.0
+offset_bottom = -267.0
+theme_override_font_sizes/font_size = 20
+text = "🔊"
+editable = false
+script = ExtResource("8_w0ycj")
+
+[node name="MasterVolumeHSliderEdit" type="HSlider" parent="." unique_id=1652831052]
+z_index = 100
+custom_minimum_size = Vector2(150, 20)
+offset_left = -171.0
+offset_top = -297.0
+offset_right = -21.0
+offset_bottom = -277.0
+max_value = 1.0
+step = 0.01
+script = ExtResource("9_w0ycj")
+
+[node name="CardDeck" type="TextEdit" parent="." unique_id=1052082544]
+custom_minimum_size = Vector2(120, 40)
+offset_left = 450.0
+offset_top = 130.0
+offset_right = 570.0
+offset_bottom = 170.0
+theme_override_font_sizes/font_size = 20
+text = "Card Deck"
+editable = false
+script = ExtResource("10_01wry")
+
+[node name="Hand" type="TextEdit" parent="." unique_id=1636319556]
+custom_minimum_size = Vector2(80, 40)
+offset_left = -410.0
+offset_top = 115.0
+offset_right = -330.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 20
+text = "Hand"
+editable = false
+script = ExtResource("10_01wry")
+
+[node name="CountdownTimer" type="TextEdit" parent="." unique_id=383847940]
+z_index = -20
+custom_minimum_size = Vector2(400, 60)
+offset_left = -556.0
+offset_top = -255.0
+offset_right = -256.0
+offset_bottom = -195.0
+theme_override_colors/background_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 30
+editable = false
+script = ExtResource("10_crvle")
+
+[node name="GameComplete" type="TextEdit" parent="." unique_id=777397897]
+z_index = 100
+custom_minimum_size = Vector2(1000, 130)
+offset_left = -394.0
+offset_top = -92.0
+offset_right = 406.0
+offset_bottom = 38.0
+theme_override_colors/background_color = Color(1, 1, 0, 0.34117648)
+theme_override_font_sizes/font_size = 70
+text = "GAME COMPLETE 🎉🥳🎊🎁"
+editable = false
+script = ExtResource("12_gfj6t")
+
+[node name="You Failed" type="TextEdit" parent="." unique_id=1315135934]
+z_index = 100
+custom_minimum_size = Vector2(450, 70)
+offset_left = -249.0
+offset_top = -70.0
+offset_right = 351.0
+theme_override_colors/background_color = Color(3.4255767, 0, 0, 0.5294118)
+theme_override_font_sizes/font_size = 40
+text = "YOU FAILED - TRY AGAIN (×_×)"
+editable = false
+script = ExtResource("12_gim0o")

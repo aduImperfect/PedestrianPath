@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b868kewlieymn"]
+
+[ext_resource type="AudioStream" uid="uid://cfp3swii6uydh" path="res://Audio/Audio_03_SFX_Kenney_Interface_Open_001.ogg" id="1_kgvtv"]
+[ext_resource type="Script" uid="uid://db1rtdwaln5qf" path="res://Scripts/audio_player.gd" id="2_kgvtv"]
+
+[node name="Audio_03_Sfx_Card_Select" type="Node2D" unique_id=139911936]
+
+[node name="AP2D" type="AudioStreamPlayer2D" parent="." unique_id=1441823629]
+stream = ExtResource("1_kgvtv")
+pitch_scale = 0.1
+script = ExtResource("2_kgvtv")

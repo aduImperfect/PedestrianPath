@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dy4aqebg6inje"]
+
+[ext_resource type="AudioStream" uid="uid://5x72pwkh3oik" path="res://Audio/Audio_07_SFX_Kenney_Interface_Scratch_001.ogg" id="1_l27pr"]
+[ext_resource type="Script" uid="uid://db1rtdwaln5qf" path="res://Scripts/audio_player.gd" id="2_tquee"]
+
+[node name="Audio_06_Sfx_Forward_Move" type="Node2D" unique_id=139911936]
+
+[node name="AP2D" type="AudioStreamPlayer2D" parent="." unique_id=1441823629]
+stream = ExtResource("1_l27pr")
+script = ExtResource("2_tquee")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://vaetqouy0nor"]
+
+[ext_resource type="AudioStream" uid="uid://dphpfsyv5v402" path="res://Audio/Audio_01_Background_NeonBumba_Chill_Gaming_Music.mp3" id="1_m8wad"]
+[ext_resource type="Script" uid="uid://db1rtdwaln5qf" path="res://Scripts/audio_player.gd" id="2_x5sgt"]
+
+[node name="Audio_01_Background" type="Node2D" unique_id=452486865]
+
+[node name="AP2D" type="AudioStreamPlayer2D" parent="." unique_id=141595553]
+stream = ExtResource("1_m8wad")
+script = ExtResource("2_x5sgt")

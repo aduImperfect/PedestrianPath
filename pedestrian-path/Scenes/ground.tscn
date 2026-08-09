@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b36n3qasn3g46"]
+
+[ext_resource type="Texture2D" uid="uid://mu37wy0y1vnp" path="res://Textures/Ground.png" id="1_688p1"]
+[ext_resource type="Script" uid="uid://ct58wk7bxsmcb" path="res://Scripts/ground.gd" id="1_oltiy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_688p1"]
+size = Vector2(40, 40)
+
+[node name="Ground" type="Node2D" unique_id=1751980]
+
+[node name="GroundRB2D" type="RigidBody2D" parent="." unique_id=1507636331]
+freeze = true
+script = ExtResource("1_oltiy")
+
+[node name="GroundCS2D" type="CollisionShape2D" parent="GroundRB2D" unique_id=972104351]
+shape = SubResource("RectangleShape2D_688p1")
+debug_color = Color(0.5014225, 0.5809717, 0.02131095, 0.41960785)
+
+[node name="Ground" type="Sprite2D" parent="GroundRB2D" unique_id=1934793575]
+z_index = 5
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_688p1")
+
+[connection signal="body_entered" from="GroundRB2D" to="GroundRB2D" method="_on_body_entered"]
