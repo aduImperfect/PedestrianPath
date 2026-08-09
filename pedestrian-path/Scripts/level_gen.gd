@@ -50,14 +50,18 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
-	for node in PlayersHelper.pedestrianNodes :
-		if node.get_child(0).global_position.x < -50.0:
-			node.queue_free()
-	
-	for node in PlayersHelper.vehicleNodes :
-		if node.get_child(0).global_position.x < -50.0:
-			node.queue_free()
-	
+	for nodeI in PlayersHelper.pedestrianNodes.size():
+		if PlayersHelper.pedestrianNodes[nodeI].get_child(0).global_position.x < -50.0:
+			PlayersHelper.pedestrianNodes[nodeI].queue_free()
+			PlayersHelper.pedestrianNodes.remove_at(nodeI)
+			break
+
+	for nodeI in PlayersHelper.vehicleNodes.size():
+		if PlayersHelper.vehicleNodes[nodeI].get_child(0).global_position.x < -50.0:
+			PlayersHelper.vehicleNodes[nodeI].queue_free()
+			PlayersHelper.vehicleNodes.remove_at(nodeI)
+			break
+
 	if initializationCommplete == false:
 		initializationAccumulationTime += _delta
 		if initializationAccumulationTime > initializationAccumulationTimer:
