@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://gv7jgorpo1hl" path="res://Textures/Pedestrian.png" id="2_epmes"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6x6n"]
-size = Vector2(7, 6)
+size = Vector2(30, 25)
 
 [node name="Pedestrian" type="Node2D" unique_id=660980076]
 metadata/_edit_vertical_guides_ = [122.0]
