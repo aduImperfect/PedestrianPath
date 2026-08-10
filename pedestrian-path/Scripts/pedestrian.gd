@@ -13,4 +13,7 @@ func _process(_delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.owner != null && body.owner.name.contains("Player") == false:
 		return
+	print("Player Here!")
 	PlayersHelper.coinCount += 20
+	hide()
+	global_position.x = -100.0

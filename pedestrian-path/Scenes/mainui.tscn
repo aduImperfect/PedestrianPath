@@ -134,7 +134,7 @@ offset_top = -70.0
 offset_right = 351.0
 theme_override_colors/background_color = Color(3.4255767, 0, 0, 0.5294118)
 theme_override_font_sizes/font_size = 40
-text = "YOU FAILED - TRY AGAIN (×_×)"
+text = "YOU FAILED - TRY AGAIN!"
 editable = false
 script = ExtResource("12_gim0o")
 metadata/_edit_use_anchors_ = true
@@ -152,7 +152,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CoinValue" type="TextEdit" parent="." unique_id=1833256153]
 z_index = 100
-custom_minimum_size = Vector2(60, 40)
+custom_minimum_size = Vector2(100, 40)
 offset_left = -381.0
 offset_top = -306.0
 offset_right = -321.0

@@ -10,7 +10,8 @@ size = Vector2(30, 25)
 metadata/_edit_vertical_guides_ = [122.0]
 
 [node name="PedestrianA2D" type="Area2D" parent="." unique_id=1577239624]
-collision_layer = 2
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_epmes")
 
 [node name="PedestrianCS2D" type="CollisionShape2D" parent="PedestrianA2D" unique_id=2060292915]
@@ -20,3 +21,5 @@ debug_color = Color(0.58187073, 0.382447, 1, 0.41960785)
 [node name="Pedestrian" type="Sprite2D" parent="PedestrianA2D" unique_id=2145661472]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_epmes")
+
+[connection signal="body_entered" from="PedestrianA2D" to="PedestrianA2D" method="_on_body_entered"]

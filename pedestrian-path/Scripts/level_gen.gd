@@ -49,7 +49,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	
+	for k in PlayersHelper.playerNodes.size():
+		if (PlayersHelper.playerNodes[k].get_child(0).global_position.y > 320.0):
+			PlayersHelper.coinCount -= 10.0 * _delta
+
 	for nodeI in PlayersHelper.pedestrianNodes.size():
 		if PlayersHelper.pedestrianNodes[nodeI].get_child(0).global_position.x < -50.0:
 			PlayersHelper.pedestrianNodes[nodeI].queue_free()
@@ -70,8 +73,6 @@ func _process(_delta: float) -> void:
 		return
 	_spawnVeichle()
 	_spawnPed()
-	if(InputMgr.global_position.y < 360):
-		PlayersHelper.coinCount -= 100
 	initializationCommplete = false
 
 func _spawnVeichle() -> void:

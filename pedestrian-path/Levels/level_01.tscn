@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://d1fd0qf5pl5af"]
 
-[ext_resource type="PackedScene" uid="uid://b36n3qasn3g46" path="res://Scenes/ground.tscn" id="1_vk57k"]
 [ext_resource type="PackedScene" uid="uid://dbswmh8aba0vb" path="res://Scenes/start.tscn" id="3_xfk5q"]
 [ext_resource type="Texture2D" uid="uid://bupgyoo5wtath" path="res://Textures/Road.png" id="6_pbphk"]
 [ext_resource type="Texture2D" uid="uid://b2aenkcs0kllq" path="res://Textures/Walkway.png" id="7_3ro2k"]
@@ -12,22 +11,6 @@
 
 [node name="Start" parent="." unique_id=1470424718 instance=ExtResource("3_xfk5q")]
 position = Vector2(73, 381)
-
-[node name="Ground_W_R_2" parent="." unique_id=1751980 instance=ExtResource("1_vk57k")]
-position = Vector2(20, 362)
-scale = Vector2(1, 18)
-
-[node name="Ground_W_R_3" parent="." unique_id=1153429463 instance=ExtResource("1_vk57k")]
-position = Vector2(1260, 360)
-scale = Vector2(1, 18)
-
-[node name="Ground_P_8" parent="." unique_id=2105888604 instance=ExtResource("1_vk57k")]
-position = Vector2(640.00006, 700)
-scale = Vector2(30, 1)
-
-[node name="Ground_P_9" parent="." unique_id=238357404 instance=ExtResource("1_vk57k")]
-position = Vector2(640.00006, 22)
-scale = Vector2(30, 1)
 
 [node name="LevelObjective" type="TextEdit" parent="." unique_id=948582256]
 visible = false
@@ -66,24 +49,24 @@ script = ExtResource("9_3ro2k")
 
 [node name="Road" type="Sprite2D" parent="." unique_id=1925598635]
 z_index = -400
-position = Vector2(640, 503)
-scale = Vector2(2.2, 1)
+position = Vector2(642, 538)
+scale = Vector2(2.4, 1.2)
 texture = ExtResource("6_pbphk")
 
 [node name="Walkway" type="Sprite2D" parent="." unique_id=1126330439]
 z_index = -500
-position = Vector2(240, 173)
-scale = Vector2(0.75, 0.75)
+position = Vector2(207, 150)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("7_3ro2k")
 
 [node name="Walkway2" type="Sprite2D" parent="." unique_id=607204346]
 z_index = -500
-position = Vector2(641, 173)
-scale = Vector2(0.75, 0.75)
+position = Vector2(623, 152)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("7_3ro2k")
 
 [node name="Walkway3" type="Sprite2D" parent="." unique_id=1772745484]
 z_index = -500
-position = Vector2(1044, 173)
-scale = Vector2(0.75, 0.75)
+position = Vector2(1061, 150)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("7_3ro2k")
